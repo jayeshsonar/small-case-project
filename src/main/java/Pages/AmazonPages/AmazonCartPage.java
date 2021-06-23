@@ -17,7 +17,7 @@ public class AmazonCartPage extends BaseClass {
     public void amazonCartPage(){
         waitForElement(amazonPriceofItem);
         amazonProductPrice = getText(amazonPriceofItem).replaceFirst("₹","");;
-        System.out.println("Total Amount of the Item is : " + amazonProductPrice);
+        System.out.println("Total Amount of the Item is : " + amazonPriceofItem);
     }
 
     public Integer agetItemAmount(){

@@ -20,18 +20,18 @@ public class TestScript2 extends TestBaseClass {
     }
 
     @Test
-    public void amazonSelectItemTest(){
+    public void amazonSelectItemTest() {
         amazonHomePage.amazonSearchItem();
         amazonHomePage.amazonSelectItem();
         amazonHomePage.amazonAddtoCartItem();
         amazonCartPage.amazonCartPage();
         amazonCartPage.agetItemAmount();
 
-        if(flipkartHomePage.fgetItemAmount()<amazonCartPage.agetItemAmount()){
-            System.out.println("The Item Iphone 12 is cheaper on Flipkart and has the price : " +flipkartHomePage.fProductPrice);
+        if (flipkartHomePage.fgetItemAmount() < amazonCartPage.agetItemAmount()) {
+            System.out.println("The Item Iphone 12 is cheaper on Flipkart and has the price : " + flipkartHomePage.fProductPrice);
+        } else {
+            System.out.println("The Item Iphone 12 is cheaper on Amazon and has the price : " + amazonCartPage.amazonProductPrice);
         }
-        else
-        System.out.println("The Item Iphone 12 is cheaper on Amazon and has the price : " +amazonCartPage.amazonProductPrice);
     }
 
 }
